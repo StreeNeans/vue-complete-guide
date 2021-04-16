@@ -4,7 +4,7 @@ const app = Vue.createApp({
       counter: 0,
       name: '',
       lastName: '',
-    //  fullname: '',
+      // fullName: '',
     };
   },
 
@@ -12,48 +12,49 @@ const app = Vue.createApp({
     counter(value) {
       if (value > 50) {
         const that = this;
-        setTimeout(function(){
+        setTimeout(function() {
           that.counter = 0;
         }, 2000);
+
       }
-    }
-  //  name(value) {
-  //    if (value === '') {
-  //      this.fullname = '';
-  //    } else {
-  //      this.fullname = value + ' ' + this.lastName;
-  //    }
+    },
+    // name(value) {
+    //   if(value === '') {
+    //     this.fullName = '';
+    //   } else {
+    //       this.fullName = value + ' ' + this.lastName;
+    //   }
       
-  //  },
-  //},
-  //lastName(value) {
-  //  if (value === '') {
-  //    this.fullname = '';
-  //  } else {
-  //    this.fullname = this.name + ' ' + value;
-  //  }
-    
+    // },
+    // lastName(value) {
+    //   if(value === '') {
+    //     this.fullName = '';
+    //   } else {
+    //       this.fullName = this.name + ' ' + value;
+    //   }
+      
+    // },
   },
 
-  computed: {
-    fullname() {
-      console.log('Running again...')
+   computed: {
+    fullName() {
+      console.log ('Running again...');
       if (this.name === '' || this.lastName === '') {
         return '';
       }
       return this.name + ' ' + this.lastName;
-    }
-  },
+    },
+   },
 
   methods: {
-    outputFullname() {
-      console.log('Running again...')
+    outputFullName() {
+      console.log ('Running again...');
       if (this.name === '') {
         return '';
       }
       return this.name + ' ' + 'Streeter';
     },
-    setName(event) {
+    setName(event, lastName) {
       this.name = event.target.value;
     },
     add(num) {
@@ -65,7 +66,7 @@ const app = Vue.createApp({
     },
     resetInput() {
       this.name = '';
-    }
+    },
   }
 });
 

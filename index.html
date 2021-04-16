@@ -22,9 +22,10 @@
       <button @click="reduce(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
       <input type="text" v-model="name">
+      <!-- :value="..." is a shorter way for v-bind:value="..." || @click is a shorter form for v-on:click="..." || there is no short way to type v-model="..." like the other ones <3-->
       <input type="text" v-model="lastName">
       <button @click="resetInput">Reset Input</button>
-      <p>Your Name: {{ fullname }}</p>
+      <p>Your Name: {{ fullName }}</p>
     </section>
   </body>
 </html>
