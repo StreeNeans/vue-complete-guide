@@ -36,7 +36,7 @@ app.component('friend-contact', {
 
   data() {
     return { 
-      detailsAreVisbile: false,
+      detailsAreVisible: false,
       friend: {
         id: 'manuel',
         name: 'Manuel Lorenz',
